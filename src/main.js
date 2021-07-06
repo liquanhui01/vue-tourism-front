@@ -1,6 +1,20 @@
-import { createApp } from 'vue'
+import {
+	createApp,
+} from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import ElementPlus from 'element-plus';
 
-createApp(App).use(store).use(router).mount('#app')
+import 'element-plus/lib/theme-chalk/index.css';
+
+// import * as echarts from 'echarts'
+
+
+
+const app = createApp(App)
+app.use(store).use(ElementPlus).use(router)
+// app.config.globalProperties.echarts = echarts;
+
+app.mount('#app')
+
